@@ -1,8 +1,7 @@
-body {
-    background: white url("images/background.gif") no-repeat;
+li a {
+    color: red;
 }
 
-
-li a {
-    color: rgb(211, 220, 56);
+body {
+    background: rgb(253, 250, 250) url("images/background.gif") no-repeat;
 }

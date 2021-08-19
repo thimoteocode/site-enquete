@@ -1,3 +1,4 @@
+from django.contrib import admin
 import datetime
 from django.utils import timezone
 from django.db import models
@@ -5,6 +6,12 @@ from django.db import models
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
+
+    @admin.display(
+        boolean=True,
+        ordering='pup_date',
+        description='Published recently?',
+    )
 
     def __str__(self):
         return self.question_text
